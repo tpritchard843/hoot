@@ -7,22 +7,41 @@
 
 		<title>Hoot</title>
 
+		<!-- Font Links -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Cabin+Sketch:wght@400;700&family=Ubuntu:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
 		<!-- external CSS link -->
 		<link rel="stylesheet" href="css/normalize.css">
 		<link rel="stylesheet" href="css/style.css">
 	</head>
 	<body>
-		<main class="container">
+		<section id="header">
+			<img src="img/hoot_logo.svg" alt="">
 			<h1>Hoot</h1>
-			<input type="text" name="" value="">
-			<button type="button" name="button">Search</button>
-
-			<div class="definitions-container box">
-				<ul id="definitionsList">
-
-				</ul>
-			</div>
-		</main>
+		</section>
+		<section class="page-wrapper">
+			<section class="container" id="quoteContainer">
+				<div class="quote-container box">
+					<p><strong>"By words we learn thoughts, and by thoughts we learn life."</strong></p>
+					<p>- <em>Jean Baptiste Girard</em></p>
+				</div>
+			</section>
+			<main class="container">
+				<h2>What word are you looking for?</h2>
+				<div class="search-container box">
+					<input type="text" name="" value="">
+					<button type="button" name="button">Hoot</button>
+				</div>
+	
+				<div class="definitions-container box">
+					<ul id="definitionsList">
+	
+					</ul>
+				</div>
+			</main>
+		</section>
 
 		<script type="text/javascript" src="js/main.js"></script>
 	</body>
