@@ -15,17 +15,26 @@ async function getFetch() {
 
 async function renderDefinitions(){
   let cardsHtml = ``;
-  const definitionsArr = await getFetch();
-  console.log(definitionsArr);
-  definitionsArr.forEach(element => {
-    // let definitions = element.meanings[0].definitions[0]
-    cardsHtml += `
-      <li>
-        <h2 class="word">${element.word} (<em>${element.meanings[0].partOfSpeech}</em>)</h2>
-			    <p class="definition">${element.meanings[0].definitions[0].definition}</p>
-      </li>
-    `;
-
-    document.querySelector('#definitionsList').innerHTML = cardsHtml;
-  });
+  try {
+    const definitionsArr = await getFetch();
+    console.log(definitionsArr);
+    if (definitionsArr.title != "No Definitions Found") {
+      definitionsArr.forEach(element => {
+        // let definitions = element.meanings[0].definitions[0]
+          cardsHtml += `
+          <li>
+            <h3 class="word">${element.word} (<em>${element.meanings[0].partOfSpeech}</em>)</h3>
+              <p class="definition">${element.meanings[0].definitions[0].definition}</p>
+          </li>
+        `;
+    
+        document.querySelector('#definitionsList').innerHTML = cardsHtml;
+      });
+    } else {
+      alert('Something went wrong')
+    }
+  }
+  catch (err) {
+    console.error(err);
+  }
 }
