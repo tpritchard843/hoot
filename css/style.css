@@ -10,9 +10,120 @@
 /******************************************
 /* LAYOUT
 /*******************************************/
+body {
+  margin: 0;
+  height: 100vh;
+  background-color: #004b23;
+  font-size: 62.5%;
+}
+
+#header {
+  margin: 0 auto;
+  top: 0;
+  width: 40%;
+  height: 130px;
+  background: rgba(0, 75, 35, 1);
+  box-shadow: 0 5px 5px goldenrod;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  color: white;
+}
+
+  #header img {
+    width: 90px;
+    margin: 10px 0;
+  }
+
+  #header h1 {
+    font-size: 7rem;
+    font-family: 'Cabin Sketch', cursive;
+    font-weight: 700;
+  }
+
+section.page-wrapper {
+  height: 100vh;
+  position: absolute;
+  top: 46.5%;
+  left: 50%;
+  transform: translate(-50%, -28%);
+}
+
 img{
   display: block;
   margin: 0 auto;
+}
+
+.container {
+  margin: auto;
+  /* display: flex;
+  flex-direction: column;
+  align-items: center; */
+  background-color: rgba(254, 250, 224, 0.9);
+  width: 40vw;
+  font-size: 1rem;
+  padding: 20px;
+  border-radius: 20px;
+  border: solid 10px goldenrod;
+  font-family: 'Abril Fatface', cursive;
+}
+  #quoteContainer.container {
+    max-height: 200px;
+    margin-bottom: 40px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  #quoteContainer.container .quote-container {
+    text-align: center;
+    border: 2px rgba(107, 112, 92, 1) solid;
+    padding: 10px;
+    font-size: 1.2rem;
+    margin: auto;
+  }
+  
+main.container {
+  min-height: 500px;
+}
+  main .search-container {
+    text-align: center;
+  }
+    main .search-container input {
+      height: 35px;
+      border-radius: 50px;
+      padding-left: 15px;
+      border: 1px solid black;
+    }
+
+    main .search-container button {
+      border-radius: 50px;
+      border: none;
+      height: 35px;
+      width: 70px;
+      background-color: rgba(0, 75, 35, 0.8);
+      color: white;
+    }
+
+    main .search-container button:hover {
+      background-color: limegreen;
+      color: black;
+    }
+
+  main h2 {
+    text-decoration: underline;
+    text-align: center;
+  }
+
+  main .definitions-container #definitionsList {
+    list-style: upper-roman;
+    text-align: left;
+  }
+
+.box {
+  margin-bottom: 20px;
 }
 
 
